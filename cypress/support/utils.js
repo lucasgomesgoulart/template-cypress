@@ -10,7 +10,7 @@ Cypress.Commands.add('LoginOutCaptcha', () => {
             "rememberMe": true
         }
     }).then((response) => {
-        cy.log(response.body.accessToken)
+        // cy.log(response.body.accessToken)
         localStorage.setItem('token', response.body.accessToken)
         cy.visit('http://localhost:4200/dashboard')
     })
